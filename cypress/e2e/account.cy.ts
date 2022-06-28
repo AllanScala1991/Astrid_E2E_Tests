@@ -20,7 +20,7 @@ describe("Account Tests", () => {
 
         cy.get(ACCOUNT.INPUT_EMAIL, {timeout: timeout})
         .should("be.visible")
-        .type("automation@mail.com");
+        .type("automationTests@mail.com");
 
         cy.get(ACCOUNT.INPUT_PASSWORD, {timeout: timeout})
         .should("be.visible")
