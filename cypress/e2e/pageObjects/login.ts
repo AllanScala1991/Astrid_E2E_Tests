@@ -8,9 +8,9 @@ export enum LOGIN {
 }
 
 export class LoginPage {
-    public timeout: number  = GLOBAL.TIMEOUT;
+    public static timeout: number  = GLOBAL.TIMEOUT;
 
-    loginInApp(email: string, password: string) {
+    static loginInApp(email: string, password: string) {
         cy.get(LOGIN.INPUT_EMAIL, {timeout: this.timeout})
         .should("be.visible")
         .type(email)
