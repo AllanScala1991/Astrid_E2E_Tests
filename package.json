@@ -4,6 +4,9 @@
   "main": "index.js",
   "author": "Allan Scala <49344838+AllanScala1991@users.noreply.github.com>",
   "license": "MIT",
+  "scripts": {
+    "dev": "cypress run --headless --browser chrome"
+  },
   "dependencies": {
     "cypress": "^10.2.0"
   },

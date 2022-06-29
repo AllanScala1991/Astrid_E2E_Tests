@@ -6,4 +6,10 @@ export default defineConfig({
       // implement node event listeners here
     },
   },
+  video: false,
+  screenshotOnRunFailure: false,
+  retries: {
+    runMode: 1,
+    openMode: 1
+  }
 });

@@ -1,4 +1,4 @@
-import { BOARD } from "./pageObjects/board";
+import { BOARD, BoardPage } from "./pageObjects/board";
 import { GLOBAL } from "./pageObjects/global";
 import { LoginPage } from "./pageObjects/login";
 import { STAGE } from "./pageObjects/stage";
@@ -40,9 +40,7 @@ describe("Board Tests", () => {
         .and("contain", "Automation Board")
         .click({force: true});
 
-        cy.get(STAGE.BTN_DELETE_BOARD, {timeout: timeout})
-        .should("be.visible")
-        .click({force: true})
+        BoardPage.deleteBoard("Automation Board");
     })
 
     it("Should not be possible create board with empty name", () => {
