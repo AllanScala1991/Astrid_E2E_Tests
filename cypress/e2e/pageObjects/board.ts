@@ -1,4 +1,5 @@
 import { GLOBAL } from "./global";
+import { LEFTBAR } from "./leftbar";
 import { STAGE } from "./stage";
 
 export enum BOARD {
@@ -29,10 +30,11 @@ export class BoardPage {
     }
 
     static deleteBoard(boardName: string) {
+        cy.visit(`${Cypress.env("BASE_URL")}board`);
+
         cy.get(BOARD.MODAL_BOARD_TITLE, {timeout: this.timeout})
-        .first()
+        .contains(boardName)
         .should("be.visible")
-        .and("contain", "Automation Board")
         .click({force: true});
 
         cy.get(STAGE.BTN_DELETE_BOARD, {timeout: this.timeout})
