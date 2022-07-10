@@ -35,7 +35,7 @@ describe("Stage Tests", () => {
 
         cy.get(GLOBAL.MESSAGE_MODAL_DESCRIPTION, {timeout: timeout})
         .should("be.visible")
-        .and("contain", "Stage criado com sucesso.");
+        .and("contain", "Quadro criado com sucesso.");
 
         BoardPage.deleteBoard("Automation Tests");
     })

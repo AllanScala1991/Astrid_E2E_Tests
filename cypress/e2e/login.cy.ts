@@ -51,6 +51,6 @@ describe("Login Tests", () => {
 
         cy.get(GLOBAL.MESSAGE_MODAL_DESCRIPTION, {timeout: timeout})
         .should("be.visible")
-        .and("contain", "Usuário ou Senha incorretos.")
+        .and("contain", "Usuário e ou Senha incorretos.")
     })
 })

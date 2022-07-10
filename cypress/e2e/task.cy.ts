@@ -46,7 +46,7 @@ describe("Task Tests", () => {
 
         cy.get(GLOBAL.MESSAGE_MODAL_DESCRIPTION, {timeout: timeout})
         .should("be.visible")
-        .and("contain", "Task criada com sucesso.");
+        .and("contain", "Tarefa criada com sucesso.");
     })
 
     it("Should not possible create task with empty inputs", () => {
